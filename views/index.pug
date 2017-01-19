@@ -1,0 +1,57 @@
+doctype html
+html.no-js(lang='es', dir='ltr')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Cotizador
+    link(rel='stylesheet', href='app.css')
+  body
+    .row.text-center
+      h1 Cotizador Imprenta ROM
+      h5 El propósito de esta página es calcular el valor de un producto
+    .row.main-container
+      form(action='')
+        // Primera columna
+        .columns.small-4
+          label(for='txt-nombre') Nombre Cliente:
+          input#txt-nombre(type='text')
+          label(for='txt-cantidad') Cantidad:
+          input#txt-cantidad(type='text', value='1000')
+          label(for='txt-multiplicidad') Multiplicidad:
+          input#txt-multiplicidad(type='text', value='3')
+          label(for='txt-moldes') Moldes:
+          input#txt-moldes(type='text', value='4')
+          label(for='txt-sobrantes') Sobrantes:
+          input#txt-sobrantes(type='text', value='4')
+        // /Primera columna
+        // Segunda Columna
+        .columns.small-4
+          fieldset
+            label Escoja el tipo de papel:
+            input#autocopiativo(type='radio', name='tipo-papel', value='autocopiativo')
+            label(for='autocopiativo') Autocopiativo
+            input#bond(type='radio', name='tipo-papel', value='bond')
+            label(for='bond') Bond
+          fieldset
+            label Escoja el tipo de impresion:
+            input#tinta(type='radio', name='tipo-impresion', value='tinta')
+            label(for='tinta') Tinta
+            input#laser(type='radio', name='tipo-impresion', value='laser')
+            label(for='laser') Láser
+          label(for='txt-valorresma') Valor Resma
+          input#txt-valorresma(type='text', value='2800')
+          label(for='txt-hojasporresma') Número de hojas por resma
+          input#txt-hojasporresma(type='text', value='500')
+          //
+            label[for="txt-valorresma"]{Valor Resma}+input#txt-valorresma
+        // /Segunda columna
+        // Tercera Columna
+        .columns.small-4.text-center
+          a#btnCalcular.button Calcular
+        // /Tercera Columna
+    .row
+      .columns.small-6
+        .resultado
+    script(src='app.js')
+
