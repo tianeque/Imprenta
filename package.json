@@ -26,6 +26,7 @@
     "watchify": "^3.8.0"
   },
   "dependencies": {
+    "empty-element": "^1.0.0",
     "express": "^4.14.0",
     "foundation-sites": "^6.3.0",
     "page": "^1.7.1",
