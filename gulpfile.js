@@ -14,19 +14,19 @@ gulp.task('styles', function () {
 })
 
 gulp.task('assets', function () {
-	gulp
-		.src('assets/*')
-		.pipe(gulp.dest('public'))
+  gulp
+    .src('assets/*')
+    .pipe(gulp.dest('public'))
 })
 
 //tarea para procesar index.js con babel.
 gulp.task('scripts', function () {
-	browserify('./src/index.js')
-		.transform(babel)
-		.bundle()
-		.pipe(source('index.js'))
-		.pipe(rename('app.js'))
-		.pipe(gulp.dest('public'))
+  browserify('./src/index.js')
+    .transform(babel)
+    .bundle()
+    .pipe(source('index.js'))
+    .pipe(rename('app.js'))
+    .pipe(gulp.dest('public'))
 })
 
 
