@@ -20,6 +20,12 @@ gulp.task('assets', function () {
     .pipe(gulp.dest('public'))
 })
 
+gulp.task('foundationJS', function () {
+  gulp
+    .src('js/vendor/*')
+    .pipe(gulp.dest('public'))
+})
+
 function compile(watch) {
   var bundle = watchify(browserify('./src/index.js', {debug: true}))
 
@@ -50,4 +56,4 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('default', ['styles', 'assets', 'build'])
+gulp.task('default', ['styles', 'assets', 'foundationJS', 'build'])
